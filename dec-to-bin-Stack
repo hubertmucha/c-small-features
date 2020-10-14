@@ -1,0 +1,17 @@
+void decToBin(int dec){
+    int ch;
+    st *s = (st *)malloc(sizeof(st));
+
+    createEmptyStack(s);
+    while (dec>0)
+    {
+        
+        push(s, dec%2);
+        dec = dec/2;
+    }
+    while (isempty(s) == 0)
+    {
+        printf("%d",pop(s));
+    }
+    
+}
